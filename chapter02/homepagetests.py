@@ -2,12 +2,11 @@ import unittest
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from __builtin__ import classmethod
 
 
 class HomePageTest(unittest.TestCase):
     @classmethod
-    def setUp(cls):
+    def setUpClass(cls):
         # create a new Firefox session """
         cls.driver = webdriver.Firefox()
         cls.driver.implicitly_wait(30)
@@ -40,7 +39,7 @@ class HomePageTest(unittest.TestCase):
         close_button.click()
 
     @classmethod
-    def tearDown(cls):
+    def tearDownClass(cls):
         # close the browser window
         cls.driver.quit()
 
@@ -52,7 +51,7 @@ class HomePageTest(unittest.TestCase):
         """
         try:
             self.driver.find_element(by=how, value=what)
-        except NoSuchElementException, e:
+        except NoSuchElementException as e:
             return False
         return True
 

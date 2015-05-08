@@ -91,7 +91,7 @@ Version in 0.7.1
 # TODO: simplify javascript using ,ore than 1 class in the class attribute?
 
 import datetime
-import StringIO
+import io
 import sys
 import time
 import unittest
@@ -536,7 +536,7 @@ class _TestResult(TestResult):
     def startTest(self, test):
         TestResult.startTest(self, test)
         # just one buffer for both stdout and stderr
-        self.outputBuffer = StringIO.StringIO()
+        self.outputBuffer = io.StringIO()
         stdout_redirector.fp = self.outputBuffer
         stderr_redirector.fp = self.outputBuffer
         self.stdout0 = sys.stdout

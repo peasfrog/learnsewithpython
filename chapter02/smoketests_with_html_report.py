@@ -1,7 +1,7 @@
 import unittest
 import HTMLTestRunner
 import os
-from searchtests import SearchTests
+from searchtests_with_class_methods import SearchTests
 from homepagetests import HomePageTest
 
 # get the directory path to output report file

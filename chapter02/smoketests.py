@@ -1,5 +1,5 @@
 import unittest
-from searchtests import SearchTests
+from searchtests_with_class_methods import SearchTests
 from homepagetests import HomePageTest
 
 # get all tests from SearchProductTest and HomePageTest class
